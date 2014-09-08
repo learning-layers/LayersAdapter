@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2014 Peter de Lange, Dominik Renzel, Advanced Community Information Systems (ACIS) Group,
+Copyright (c) 2014 Peter de Lange, Dominik Renzel, Aarij Siddiqui, Advanced Community Information Systems (ACIS) Group,
 Chair of Computer Science 5 (Databases & Information Systems), RWTH Aachen University, Germany
 All rights reserved.
 
@@ -31,20 +31,21 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 /**
-* LAS2peer Layers Adapter Example - Application Script
+* Layers Adapter Example - Application Script
 * 
-* This file contains the main logic of the "LAS2peer Layers Adapter Example Client".
-* It uses the "layers_restful_library" for calls to the LAS2peer server.
+* This file contains the main logic of the "Layers Adapter Example Client".
+*
 */
-var SERVICE_ENDPOINT_URI = "http://127.0.0.1:8080/las2peer-layers-example-service" //Please adjust this variable
-var myOpenIdRequestLibrary;
+var LAS2PEER_SERVICE_ENDPOINT_URI = "http://127.0.0.1:8080/las2peer-layers-example-service";
+var CLVITRA_SERVICE_ENDPOINT_URI = "http://127.0.0.1:8080/las2peer-layers-example-service";
+var myLAS2peerOpenIdRequestLibrary;
+var myClvitraOpenIdRequestLibrary;
 
 //The two perspectives of the client.
 var loginNode				= document.getElementById("login"),
 	mainViewNode			= document.getElementById("mainView");
 	welcomeMessageNode 		= document.getElementById("welcomeMessage");
-	exemplaryMethodsNode 	= document.getElementById("exemplaryMethods");
-	getNetInfoNode 			= document.getElementById("getNetInfo");
+	clvitraNode 			= document.getElementById("clvitraVideos");
 
 /**
 * Shows the login perspective.
@@ -89,21 +90,19 @@ var show_main_perspective = function(){
 	$(loginNode).hide();
 	$(mainViewNode).show();
 	
-	myOpenIdRequestLibrary	= new OpenIdRequestLibrary(SERVICE_ENDPOINT_URI);
-	myOpenIdRequestLibrary.sendRequest("welcomeMessage", "get", null, function(result){
+	myLAS2peerOpenIdRequestLibrary	= new LAS2peerOpenIdRequestLibrary(LAS2PEER_SERVICE_ENDPOINT_URI);
+	myClvitraOpenIdRequestLibrary = new ClViTraRequestLibrary(CLVITRA_SERVICE_ENDPOINT_URI);
+	
+	myLAS2peerOpenIdRequestLibrary.sendRequest("welcomeMessage", "get", null, function(result){
 		welcomeMessageNode.innerHTML = "<h3>" + result + "</h3>";
 	});
 };
 
 
-var get_net_info = function(){
-	myOpenIdRequestLibrary.sendRequest("getNetInfo", "get", null, function(result){
-		if(result.length < 5){ //no known nodes..
-				getNetInfoNode.innerHTML = "<p>Sorry, no nodes are known...<br><i>(Maybe you only started a single node?)</i></p>";
-		}
-		else{
-			getNetInfoNode.innerHTML = "<p>Known Nodes:<br>" + result + "</p>";
-		}
+var get_clvitra_videos = function(){
+
+	myClvitraOpenIdRequestLibrary.getVideos(localStorage.user_name, "transcoded", function(result){
+				clvitraNode.innerHTML = result;
 	});
 };
 
