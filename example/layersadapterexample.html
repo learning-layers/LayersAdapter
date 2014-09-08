@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2014 Peter de Lange, Dominik Renzel, Advanced Community Information Systems (ACIS) Group, 
+Copyright (c) 2014 Peter de Lange, Dominik Renzel, Aarij Siddiqui, Advanced Community Information Systems (ACIS) Group, 
 Chair of Computer Science 5 (Databases & Information Systems), RWTH Aachen University, Germany
 All rights reserved.
 
@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="A simple example of a client using the OpenID Connect button to log in to a LAS2peer node via the Layers adapter." />
+		<meta name="description" content="A simple example of a client using the OpenID Connect button to log into different Layers services." />
 		<title>Layers Adapter Test Client</title>
 		
 		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -70,13 +70,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<!-- The main view area -->
 		<div id="mainView">
 			<h1 align="center">Layers Adapter Test Client</h1>
-			
+			<br><br>
+			<p>This message is send from LAS2peer Server:</p>
+			<br>
 			<div id="welcomeMessage">waiting for LAS2<sup>peer</sup> to respond..</div>
 			<br><br>
-			<div id="exemplaryMethods">
-				<form id="getNetInfo" action="javascript:get_net_info()">
-					Get known nodes of the LAS2<sup>peer</sup> network: <input style = "font-size: 1.2em;" type="submit"  value="Show!"/>
-				</form>
+			<p>This is a method of the Cloud Video Transcoder Service:</p>
+			<div id="clvitraVideos">
+			   <form id="getclvitravideos" action="javascript:get_clvitra_videos()">
+					Get videos from Cloud Video Transcoder <input style = "font-size: 1.2em;" type="submit"  value="Show!"/>
+			   </form>
 			</div>
 			
 		</div>
@@ -89,23 +92,23 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<!-- import Bootstrap for responsive UI -->
 		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 		
-		<!-- import JWS and JSRSASIGN -->
-		<script type="text/javascript" src="./js/jsjws/jws-2.0.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/ext/base64.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/base64x-1.1.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/ext/jsbn.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/ext/jsbn2.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/asn1hex-1.1.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/crypto-1.1.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/ext/rsa.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/ext/rsa2.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/rsapem-1.1.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/rsasign-1.2.min.js"></script>
-		<script type="text/javascript" src="./js/jsrsasign/x509-1.1.js"></script>
+		<!-- import JWS and JSRSASIGN for the OIDC button-->
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsjws/jws-2.0.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/ext/base64.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/base64x-1.1.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/ext/jsbn.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/ext/jsbn2.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/asn1hex-1.1.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/crypto-1.1.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/ext/rsa.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/ext/rsa2.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/jsrsasign/rsapem-1.1.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/js/jsrsasign/rsasign-1.2.min.js"></script>
+		<script type="text/javascript" src="../lib/modules/oidc-button/js/jsrsasign/x509-1.1.js"></script>
 		
 		<!-- Here the actual logic takes place -->
-		<script type="text/javascript" src="./js/layers_restful_library.js"></script>
-		<script type="text/javascript" src="./js/las2peer_layers_adapter_example.js"></script>
+		<script type="text/javascript" src="./example_application_script.js"></script>
+		<script type="text/javascript" src="../lib/layersadapter.js"></script>
 		
 	</body>
 </html>
