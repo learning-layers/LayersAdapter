@@ -36,8 +36,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * This file contains the main logic of the "Layers Adapter Example Client".
 *
 */
-var LAS2PEER_SERVICE_ENDPOINT_URI = "http://127.0.0.1:8080/las2peer-layers-example-service";
-var CLVITRA_SERVICE_ENDPOINT_URI = "http://127.0.0.1:8080/las2peer-layers-example-service";
+var LAS2PEER_SERVICE_ENDPOINT_URI = "http://api.learning-layers.eu:8280/las2peer";
+var CLVITRA_SERVICE_ENDPOINT_URI = "http://api.learning-layers.eu:8280/clvitra";
 var myLAS2peerOpenIdRequestLibrary;
 var myClvitraOpenIdRequestLibrary;
 
@@ -56,7 +56,7 @@ var show_login_perspective = function(){
 	
 	//Load login button (and its logic) asynchronously, since it can take some time to connect with server
 	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-	po.src = './js/oidc_button.js';
+	po.src = '../lib//modules/oidc-button/oidc_button.js';
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(po, s);
 	
@@ -102,7 +102,8 @@ var show_main_perspective = function(){
 var get_clvitra_videos = function(){
 
 	myClvitraOpenIdRequestLibrary.getVideos(localStorage.user_name, "transcoded", function(result){
-				clvitraNode.innerHTML = result;
+		result = JSON.stringify(result);
+		clvitraNode.innerHTML = result;
 	});
 };
 
