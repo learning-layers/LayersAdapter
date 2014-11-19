@@ -1,0 +1,1571 @@
+<api xmlns="http://ws.apache.org/ns/synapse" name="SocialSemanticServer" context="/SocialSemanticServer">
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileDownload">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRESTFileDownload/fileDownload"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileUpload">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRESTFileUpload/fileUpload"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileReplace">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRESTFileReplace/fileReplace"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/discWithEntriesGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/discWithEntriesGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/search">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/search"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/tagEntitiesForTagsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/tagEntitiesForTagsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/appStackLayoutsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/appStackLayoutsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/ratingSet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/ratingSet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityShare">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityShare"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collCumulatedTagsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collCumulatedTagsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpCreate">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpCreate"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/authCheckCred">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/authCheckCred"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/tagAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/tagAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionCreate">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionCreate"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/categoryAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/categoryAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/tagEdit">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/tagEdit"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileExtGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/fileExtGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityCircleGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityCircleGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/friendAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/friendAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/dataImportEvernote">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/dataImportEvernote"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityPublicSet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityPublicSet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/activityAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/activityAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/appStackLayoutCreate">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/appStackLayoutCreate"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/appAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/appAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/friendsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/friendsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityEntitiesToCircleAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityEntitiesToCircleAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionCurrentGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionCurrentGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityUpdate">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityUpdate"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collsCouldSubscribeGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collsCouldSubscribeGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/locationsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/locationsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/recommTags">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/recommTags"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collsWithEntries">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collsWithEntries"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionRemoveCircle">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionRemoveCircle"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/userAll">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/userAll"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionSetTimelineState">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionSetTimelineState"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/discEntryAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/discEntryAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileUserFileWrites">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/fileUserFileWrites"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/messagesGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/messagesGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collEntryDelete">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collEntryDelete"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collHierarchyGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collHierarchyGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileWritingMinutesLeft">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/fileWritingMinutesLeft"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collsEntityIsInGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collsEntityIsInGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityUsersToCircleAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityUsersToCircleAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/tagsRemove">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/tagsRemove"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityDescGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityDescGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/categoriesGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/categoriesGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/locationAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/locationAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityEntityUsersGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityEntityUsersGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collRootGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collRootGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/modelUEResourceDetails">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/modelUEResourceDetails"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/categoryFrequsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/categoryFrequsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/uEGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/uEGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileSetReaderOrWriter">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/fileSetReaderOrWriter"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityDirectlyAdjoinedEntitiesRemove">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityDirectlyAdjoinedEntitiesRemove"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/categoriesPredefinedGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/categoriesPredefinedGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collEntryAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collEntryAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionAddEntity">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionAddEntity"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/flagsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/flagsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/uECountGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/uECountGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/categoriesRemove">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/categoriesRemove"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionCurrentSet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionCurrentSet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/discRemove">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/discRemove"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/flagsSet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/flagsSet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collEntryChangePos">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collEntryChangePos"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/appsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/appsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collEntriesDelete">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collEntriesDelete"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionUpdateCircle">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionUpdateCircle"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/appStackLayoutTileAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/appStackLayoutTileAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/systemVersionGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/systemVersionGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/recommResources">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/recommResources"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionAddCircle">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionAddCircle"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collWithEntries">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collWithEntries"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/fileCanWrite">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/fileCanWrite"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/discsAllGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/discsAllGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/uEAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/uEAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/uEsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/uEsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/activityTypesGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/activityTypesGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collEntriesAdd">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collEntriesAdd"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionRemoveEntity">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionRemoveEntity"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/tagsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/tagsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityCircleCreate">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityCircleCreate"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/collParentGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/collParentGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/ratingOverallGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/ratingOverallGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionUpdateEntity">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionUpdateEntity"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/discURIsForTargetGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/discURIsForTargetGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityDescsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityDescsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/learnEpVersionGetTimelineState">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/learnEpVersionGetTimelineState"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityUserCirclesGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityUserCirclesGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/activitiesGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/activitiesGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/entityCopy">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/entityCopy"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/categoryEdit">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/categoryEdit"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/messageSend">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/messageSend"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/tagFrequsGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/tagFrequsGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET OPTIONS DELETE PUT" url-mapping="/categoryEntitiesForCategoriesGet">
+      <inSequence>
+         <property name="REST_URL_POSTFIX" scope="axis2" action="remove"></property>
+         <send>
+            <endpoint>
+               <address uri="http://10.255.255.6:8084/ss-adapter-rest/SSAdapterRest/categoryEntitiesForCategoriesGet"></address>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="messageType" value="application/json" scope="axis2"></property>
+         <property name="ContentType" value="application/json" scope="axis2"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,accept,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+</api>
+                        
