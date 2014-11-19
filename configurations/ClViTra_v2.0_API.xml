@@ -1,0 +1,58 @@
+<api xmlns="http://ws.apache.org/ns/synapse" name="ClViTra_2" context="/clvitra">
+   <resource methods="GET" uri-template="/{userId}/{request}">
+      <inSequence>
+         <send>
+            <endpoint>
+               <http method="get" uri-template="http://10.255.255.22:9080/ClViTra_2.0/rest/videos/{uri.var.userId}/{uri.var.request}"></http>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="Access-Control-Allow-Origin" value="*" scope="transport"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="DELETE OPTIONS" uri-template="/delete">
+      <inSequence>
+         <send>
+            <endpoint>
+               <http method="delete" uri-template="http://10.255.255.22:9080/ClViTra_2.0/rest/delete"></http>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,Content-Type,Action,videoname,user" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="GET" uri-template="/verifyAccessToken">
+      <inSequence>
+         <send>
+            <endpoint>
+               <http method="get" uri-template="http://10.255.255.22:9080/ClViTra_2.0/rest/verifyAccessToken"></http>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="Access-Control-Allow-Origin" value="*" scope="transport"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+   <resource methods="GET" uri-template="/getAccessToken">
+      <inSequence>
+         <send>
+            <endpoint>
+               <http method="get" uri-template="http://10.255.255.22:9080/ClViTra_2.0/rest/getAccessToken"></http>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <property name="Access-Control-Allow-Origin" value="*" scope="transport"></property>
+         <property name="Access-Control-Allow-Headers" value="authorization,Access-Control-Allow-Origin,Origin,Content-Type,Action" scope="transport"></property>
+         <send></send>
+      </outSequence>
+   </resource>
+</api>
+                        
